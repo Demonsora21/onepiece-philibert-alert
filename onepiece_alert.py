@@ -123,8 +123,6 @@ def main():
         for product in current_products
         if product not in old_products
     ]
-send_telegram("🏴‍☠️ TEST Telegram - le bot fonctionne !")
-send_discord("🏴‍☠️ TEST Discord - le bot fonctionne !")
 
     if new_items:
 
