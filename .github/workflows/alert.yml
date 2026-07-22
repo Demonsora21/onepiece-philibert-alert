@@ -9,9 +9,6 @@ jobs:
   check:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     steps:
       - name: Télécharger le dépôt
         uses: actions/checkout@v4
