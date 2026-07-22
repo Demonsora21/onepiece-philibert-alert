@@ -112,6 +112,9 @@ def send_telegram(message):
 
 def main():
 
+    send_telegram("🏴‍☠️ Test Telegram OK")
+    send_discord("🏴‍☠️ Test Discord OK")
+
     print("Vérification Philibert...")
 
     current_products = get_products()
