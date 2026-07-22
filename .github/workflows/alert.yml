@@ -6,10 +6,10 @@ name: One Piece Philibert Alert
 
   workflow_dispatch:
 
-
 jobs:
   check:
     runs-on: ubuntu-latest
+    
     permissions:
       contents: write
 
