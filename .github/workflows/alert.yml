@@ -1,8 +1,6 @@
 name: One Piece Philibert Alert
 
-"on":
-  schedule:
-    - cron: "0 8 * * *"
+on:
   workflow_dispatch:
 
 jobs:
@@ -10,28 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Télécharger le dépôt
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Installer Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - name: Installer les dépendances
-        run: pip install -r requirements.txt
-
-      - name: Vérifier Philibert
-        env:
-          DISCORD_WEBHOOK: "${{ secrets.DISCORD_WEBHOOK }}"
-          TELEGRAM_TOKEN: "${{ secrets.TELEGRAM_TOKEN }}"
-          TELEGRAM_CHAT_ID: "${{ secrets.TELEGRAM_CHAT_ID }}"
-        run: python onepiece_alert.py
-
-      - name: Sauvegarder historique
+      - name: Test
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
-          git add products.json
-          git commit -m "Update products" || exit 0
-          git push
+          echo "Workflow OK"
