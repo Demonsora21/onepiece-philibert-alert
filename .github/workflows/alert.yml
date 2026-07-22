@@ -10,7 +10,6 @@ name: One Piece Philibert Alert
 jobs:
   check:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
 
